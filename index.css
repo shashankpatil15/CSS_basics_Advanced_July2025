@@ -1,0 +1,31 @@
+ body{
+            color:rgb(99, 24, 24);
+            /* color:black;
+            color:#f6730f; */
+            /* background-color: aqua; */
+            /* opacity: 0.9; */
+            /* background-image: url('https://www.w3schools.com/w3images/fjords.jpg');
+            background-repeat: no-repeat; */
+            /* background-color: rgb(204, 126, 114);
+            background-color: #1d1dae;
+            opacity: 0.9;
+            
+             background-image: url('https://www.w3schools.com/w3images/fjords.jpg');
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-attachment: scroll;
+             color:brown; */
+        }
+        div {
+            width: 300px;
+            height: 200px;
+            background-color: lightyellow;
+            border: 9px solid rgb(23, 1, 63);
+            border-style: dashed;
+            border-top: 2px solid green;
+            padding:30px 40px 50px 60px;
+        }
+        h1{
+            margin-left: 30px;
+            margin-bottom: 50px;
+        }
