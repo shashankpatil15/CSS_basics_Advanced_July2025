@@ -1,31 +1,83 @@
- body{
-            color:rgb(99, 24, 24);
-            /* color:black;
-            color:#f6730f; */
-            /* background-color: aqua; */
-            /* opacity: 0.9; */
-            /* background-image: url('https://www.w3schools.com/w3images/fjords.jpg');
-            background-repeat: no-repeat; */
-            /* background-color: rgb(204, 126, 114);
-            background-color: #1d1dae;
-            opacity: 0.9;
-            
-             background-image: url('https://www.w3schools.com/w3images/fjords.jpg');
-            background-repeat: no-repeat;
-            background-position: right top;
-            background-attachment: scroll;
-             color:brown; */
+ body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { border: 5px solid #000; padding: 10px; }
+        .main {
+            margin-top: 20px;
+            font-size: 0; /* Remove inline-block spacing */
         }
-        div {
-            width: 300px;
-            height: 200px;
-            background-color: lightyellow;
-            border: 9px solid rgb(23, 1, 63);
-            border-style: dashed;
-            border-top: 2px solid green;
-            padding:30px 40px 50px 60px;
+        .column {
+            display: inline-block;
+            vertical-align: top;
+            width: 23%;
+            margin-right: 2%;
+            border: 4px solid #000;
+            padding: 15px;
+            min-height: 350px;
+            position: relative;
+            font-size: 16px;
+            box-sizing: border-box;
         }
-        h1{
-            margin-left: 30px;
-            margin-bottom: 50px;
+        .main .column:last-child {
+            margin-right: 0;
+        }
+        .blue-box {
+            background: #3454d1;
+            color: #fff;
+            width: 90%;
+            height: 80%;
+            margin: 0 auto;
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 20px;
+            box-sizing: border-box;
+            display: table;
+            text-align: center;
+        }
+        .bg-image {
+            width: 90%;
+            height: 80%;
+            margin: 0 auto;
+            background: url('img/1234.png') center/cover no-repeat;
+            color: #222;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: table;
+            text-align: center;
+        }
+        .quote-box {
+            background: #ccc;
+            border-radius: 20px;
+            width: 80%;
+            height: 70%;
+            margin: 0 auto;
+            font-size: 1.3em;
+            font-weight: bold;
+            box-shadow: 2px 2px 8px #aaa;
+            display: table;
+            text-align: center;
+        }
+        .custom-box {
+            width: 90%;
+            height: 80%;
+            margin: 0 auto;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: table;
+            text-align: center;
+        }
+        .margin-label {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .font-label {
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            width: 100%;
+            text-align: left;
+            font-size: 1em;
         }
