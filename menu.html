@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Left Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 100vh;
+            background: #222;
+            color: #fff;
+            padding-top: 40px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        }
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .side-menu li {
+            margin: 20px 0;
+        }
+        .side-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            display: block;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .side-menu a:hover {
+            background: #444;
+        }
+        .main-content {
+            margin-left: 240px;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="side-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <h1>Welcome</h1>
+        <p>This is the main content area. The menu is fixed on the left side.</p>
+    </div>
+</body>
+</html>
