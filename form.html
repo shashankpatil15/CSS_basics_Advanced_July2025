@@ -3,24 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize:vertical;
+        }
+        label {
+            padding:12px 0;
+            display: inline-block;
+            font: 1em sans-serif;
+            color: #333;
+            font-weight: 600;
+        }
+        input[type="submit"]
+        {
+            background-color: #17A414;
+            box-shadow: 2px 2px 7px 1px #17A414;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            float: right;
+        }
+        input[type="submit"]:hover{
+            background-color: #267869;
+            box-shadow: 2px 2px 7px 1px #267869;
+        }
+        input[type="reset"]
+        {
+            background-color: #f44336;
+            box-shadow: 2px 2px 7px 1px #f44336;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            float: right;
+            margin-right: 10px;
+        }
+        .container{
+            background-color: antiquewhite;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        .col-25{
+            width: 25%;
+            float: left;
+            margin-top: 6px;
+        }
+        .col-75{
+            width: 75%;
+            float: right;
+            margin-top: 6px;
+        }
+        .row::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width:600px){
+            .col-25, .col-75, input[type=submit],input[type=reset] {
+                width: 100%;
+                margin-top: 0;
+            } 
+            input[type="submit"], input[type="reset"] {
+                float: none;
+                margin-right: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <h1>Form Demo</h1>
+    <hr>
     <div class="container">
-        <form action="./dashboard.html" method="post">
-            <!-- input Admisstion Form College -->
-             <!-- User need to input 
-              1.Text
-              2.Number
-              3.email
-              4.password
-              5.radio button
-              6.checkbox(term and condition)
-              7.select (District, State, Country)
-              8.textarea
-              9. submit button
-               -->
-            <input type="submit" value="Submit">
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Full Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" id="name" name="name" placeholder="Enter your full Email" required>
+                </div>
+            </div>
+              <div class="row">
+                <div class="col-25">
+                    <label for="name">Password</label>
+                </div>
+                <div class="col-75">
+                  <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Age</label>
+                </div>
+                <div class="col-75">
+                   <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-25">
+                    <label for="name">Address</label>
+                </div>
+                <div class="col-75">
+                   <textarea name="address" id="address"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Country</label>
+                </div>
+                <div class="col-75">
+                    <select name="country" id="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+
+                </div>
+                <div class="col-75">
+                    <input type="checkbox" id="terms" name="terms" value="agree" required>
+                    <label for="terms">I agree to the terms and conditions</label>      
+                </div>
+                
+            </div>
+            <div class="row">
+               <div class="col-25">
+                <input type="submit" value="Submit">
+               </div>
+               <div class="col-75">
+                <input type="reset" value="Reset">
+               </div>
+            </div>
         </form>
     </div>
 </body>
