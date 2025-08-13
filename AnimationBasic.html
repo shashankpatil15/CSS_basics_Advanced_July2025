@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px;
+            font-size: 24px;
+            color: white;
+            border-radius: 10px;
+            animation-name: myAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: 3;
+        }
+        /* div:hover{
+            background-color: blue;;
+        } */
+        @keyframes myAnimation{
+            0%{
+                background-color: rgb(1, 7, 9);
+                transform: translateX(0px);
+            }
+            50%{
+                background-color: lightcoral;
+                transform: translateX(100px);
+            }
+            100%{
+                background-color: lightblue;
+                transform: translateX(0px);
+            }
+
+        } 
+    </style>
+</head>
+<body>
+    <h2>Animations Basics</h2>
+    <div></div>
+</body>
+</html>
