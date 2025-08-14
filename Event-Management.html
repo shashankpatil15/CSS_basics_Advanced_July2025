@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management Company</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #35424a;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin: 0 5px;
+      font-size: 1.1em;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      background-color: #495057;
+      border-radius: 5px;
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 800px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      line-height: 1.8;
+      font-size: 1.1em;
+      transition: box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    section h2 {
+      color: #35424a;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+      border-bottom: 2px solid #35424a;
+      padding-bottom: 10px;
+    }
+
+    section p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      font-size: 1em;
+      color: #333;
+    }
+
+    table th {
+      background-color: #35424a;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+      background-color: #ddd;
+    }
+
+    table tfoot {
+      background-color: #35424a;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    table tfoot td {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 25px auto;
+      padding: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #35424a;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background-color: #35424a;
+      color: #ffffff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #495057;
+    }
+    .gallery {
+      display: inline-block;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px 0;
+      width: 190px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .gallery .desc {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    .gallery a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .gallery a:hover img {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .gallery a:focus img {
+      outline: 2px solid #35424a;
+      outline-offset: 4px;
+    }
+
+
+footer {
+      background-color: #35424a;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+    header h1 {
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes example {
+  from {color: red;}
+  to {color: yellow;}
+}
+  </style>
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>Event Management Company</h1>
+      <p>NGO for planting trees</p>
+    </header>
+    <nav>
+      <i class="fa-solid fa-address-card"></i><a href="#AboutUs">AboutUs</a>
+      <a href="#ContactUs">ContactUs</a>
+      <a href="#Home">Home</a>
+      <a href="#Gallary">Gallary</a>
+      <a href="#Services">Services</a>
+      <a href="#Scheduled">Schedule</a>
+    </nav>
+    <section>
+      <h2 id="AboutUs">About Event</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum repudiandae odio corrupti, inventore natus
+        maxime tempore autem corporis nobis quisquam est ab voluptate debitis. Esse id facere impedit ad!</p>
+    </section>
+    <section id="Scheduled">
+      <h2>Event Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>srNo</th>
+            <th>Session Name</th>
+            <th>Time</th>
+            <th>Date</th>
+            <th>Speaker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Opening Ceremony</td>
+            <td>10:00 AM</td>
+            <td>2025-07-01</td>
+            <td>John Doe</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Keynote Speech</td>
+            <td>11:00 AM</td>
+            <td>2025-07-01</td>
+            <td>Jane Smith</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>Panel Discussion</td>
+            <td>01:00 PM</td>
+            <td>2025-07-01</td>
+            <td>Dr. Emily Johnson</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>Networking Lunch</td>
+            <td>02:00 PM</td>
+            <td>2025-07-01</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>Workshops</td>
+            <td>03:00 PM</td>
+            <td>2025-07-01</td>
+            <td>Various Speakers</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5">&laquo;&laquo; &laquo;Pagination &gtquest;&gtquest;&gtquest;&gtquest;</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <section id="ContactUs">
+      <h2>Contact Us</h2>
+      <form action="#">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <section id="Gallary">
+      <div class="gallery">
+        <a target="_blank" href="https://www.w3schools.com/css/img_5terre.jpg">
+          <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" >
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="https://www.w3schools.com/css/img_forest.jpg">
+          <img src="https://www.w3schools.com/css/img_forest.jpg" alt="Forest" >
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="https://www.w3schools.com/css/img_lights.jpg">
+          <img src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights" >
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="https://www.w3schools.com/css/img_mountains.jpg">
+          <img src="https://www.w3schools.com/css/img_mountains.jpg" alt="Mountains" >
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 Event Management Company. All rights reserved.</p>
+      <p>Follow us on:
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>
